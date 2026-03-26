@@ -29,9 +29,9 @@ Las herramientas y librerías clave utilizadas para el desarrollo de este proyec
 ```text
 📦 prestacar-ml
  ┣ 📜 notebook.ipynb     # Cuaderno principal con el análisis exploratorio y entrenamiento de los modelos
- ┣ 📜 prestacar.csv      # Dataset utilizado para el entrenamiento (datos locales)
+ ┣ 📜 prestacar.csv      # Dataset utilizado para el entrenamiento 
  ┣ 📜 requirements.txt   # Dependencias necesarias para ejecutar el proyecto
- ┗ 📜 README.md          # Documentación del proyecto (este archivo)
+ ┗ 📜 README.md          # Documentación del proyecto 
 ```
 
 ## Instalación y Uso
