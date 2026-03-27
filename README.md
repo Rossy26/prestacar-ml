@@ -1,70 +1,69 @@
-# Prestacar ML - Análisis de Riesgo Crediticio
+# Prestacar ML - Credit Risk Analysis
 
-## Descripción del Proyecto
+## Project Description
 
-Este proyecto consiste en la construcción de un modelo de **Machine Learning** para evaluar el riesgo crediticio de los clientes de una entidad financiera. El objetivo principal es predecir la probabilidad de que un cliente caiga en mora con su préstamo automotriz ("Prestacar"). 
+This project consists of building a **Machine Learning** model to evaluate the credit risk of a financial institution's clients. The main objective is to predict the probability of a client defaulting on their automotive loan ("Prestacar").
 
-Uno de los principales retos abordados en este proyecto es el manejo de **clases desbalanceadas**, dado que la gran mayoría de los clientes cumplen con sus pagos, mientras que una pequeña fracción representa a los clientes morosos.
+One of the main challenges addressed in this project is handling **imbalanced classes**, given that the vast majority of clients fulfill their payments, while a small fraction represents the defaulting clients.
 
-## Datos y Características
+## Data and Features
 
-El modelo se entrena utilizando el conjunto de datos `prestacar.csv`, el cual incluye información financiera y demográfica de los clientes, tales como:
-- Ingresos del cliente.
-- Anualidad del préstamo.
-- Años con casa propia.
-- Evaluaciones crediticias (Scores).
-- Variable objetivo: `moroso` (0 = Cumplido, 1 = Moroso).
+The model is trained using the `prestacar.csv` dataset, which includes the clients' financial and demographic information, such as:
+- Client income.
+- Loan annuity.
+- Years with own home.
+- Credit scores.
+- Target variable: `moroso` (0 = Compliant, 1 = Defaulter).
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-Las herramientas y librerías clave utilizadas para el desarrollo de este proyecto son:
-- **Python**: Lenguaje de programación principal.
-- **Pandas**: Para la manipulación y análisis de datos.
-- **Scikit-Learn**: Para la creación, entrenamiento y evaluación de modelos de Machine Learning (ej. `DecisionTreeClassifier`).
-- **Matplotlib / Seaborn**: Para la visualización de datos y resultados de las distintas métricas de evaluación.
-- **Jupyter Notebook**: Como entorno de desarrollo interactivo.
+The key tools and libraries used for developing this project are:
+- **Python**: Main programming language.
+- **Pandas**: For data manipulation and analysis.
+- **Scikit-Learn**: For the creation, training, and evaluation of Machine Learning models (e.g., `DecisionTreeClassifier`).
+- **Matplotlib / Seaborn**: For data visualization and results of different evaluation metrics.
+- **Jupyter Notebook**: As an interactive development environment.
 
-## Estructura del Repositorio
+## Repository Structure
 
 ```text
 📦 prestacar-ml
- ┣ 📜 notebook.ipynb     # Cuaderno principal con el análisis exploratorio y entrenamiento de los modelos
- ┣ 📜 prestacar.csv      # Dataset utilizado para el entrenamiento (datos locales)
- ┣ 📜 requirements.txt   # Dependencias necesarias para ejecutar el proyecto
- ┗ 📜 README.md          # Documentación del proyecto (este archivo)
+ ┣ 📜 notebook.ipynb     # Main notebook with exploratory analysis and model training
+ ┣ 📜 prestacar.csv      # Dataset used for training (local data)
+ ┣ 📜 requirements.txt   # Dependencies needed to run the project
+ ┗ 📜 README.md          # Project documentation (this file)
 ```
 
-## Instalación y Uso
+## Installation and Usage
 
-Sigue estos pasos para ejecutar el proyecto en tu entorno local:
+Follow these steps to run the project in your local environment:
 
-1. **Clona el repositorio:**
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Rossy26/prestacar-ml.git
    cd prestacar-ml
    ```
 
-2. **Crea un entorno virtual (Opcional pero recomendado):**
+2. **Create a virtual environment (Optional but recommended):**
    ```bash
    python -m venv venv
-   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-3. **Instala las dependencias necesarias:**
+3. **Install the necessary dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Ejecuta el entorno interactivo:**
-   Abre el archivo `notebook.ipynb` usando Jupyter Notebook o Jupyter Lab para ver el análisis completo y ejecutar las celdas de código.
+4. **Run the interactive environment:**
+   Open the `notebook.ipynb` file using Jupyter Notebook or Jupyter Lab to see the full analysis and run the code cells.
    ```bash
    jupyter notebook notebook.ipynb
    ```
 
-## Modelado y Evaluación
+## Modeling and Evaluation
 
-El proyecto comienza estableciendo un **baseline** utilizando un `DecisionTreeClassifier`. Parte fundamental del proceso implica:
-1. **División de los datos**: Separación en conjuntos de entrenamiento (`train`), validación (`val`) y prueba (`test`) para evitar el sobreajuste.
-2. **Entrenamiento**: Ajuste de los modelos con los datos de entrenamiento.
-3. **Métricas de Evaluación**: Análisis del rendimiento de los modelos prestándole especial atención a métricas útiles para un caso de uso con clases desbalanceadas (como precisión, recall, f1-score y la matriz de confusión), entendiendo las limitaciones de usar únicamente la exactitud (accuracy).
-
+The project starts by establishing a **baseline** using a `DecisionTreeClassifier`. A fundamental part of the process involves:
+1. **Data splitting**: Separation into training (`train`), validation (`val`), and test (`test`) sets to avoid overfitting.
+2. **Training**: Fitting the models with the training data.
+3. **Evaluation Metrics**: Analyzing the models' performance, paying special attention to useful metrics for a use case with imbalanced classes (such as precision, recall, f1-score, and the confusion matrix), understanding the limitations of using only accuracy.
